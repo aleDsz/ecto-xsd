@@ -1,4 +1,4 @@
-defmodule Ecto.XSD.MixProject do
+defmodule EctoXSD.MixProject do
   use Mix.Project
 
   def project do
