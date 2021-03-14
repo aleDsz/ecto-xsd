@@ -20,7 +20,11 @@ defmodule EctoXSD.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ecto, "~> 3.5", optional: true}
+      {:ecto, "~> 3.5", optional: true},
+      {:temporary_env, "~> 2.0", optional: true, only: :test},
+      {:credo, "~> 1.5.0", optional: true, only: :test, runtime: false},
+      {:excoveralls, "~> 0.10", optional: true, only: :test},
+      {:git_hooks, "~> 0.5.0", optional: true, only: :test, runtime: false}
     ]
   end
 end
