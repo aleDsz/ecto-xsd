@@ -42,19 +42,12 @@ defmodule EctoXSD.Schema do
   end
 
   defp __xsd__(xsd_config) when is_atom(xsd_config) do
-    get_config()
-    |> Keyword.fetch!(xsd_config)
+    get_config(xsd_config)
     |> validate_xsd_path()
   end
 
   defp __xsd__(xsd_path) when is_binary(xsd_path) do
     validate_xsd_path(xsd_path)
-  end
-
-  defp validate_xsd_path({:system, env_var}) do
-    env_var
-    |> System.get_env()
-    |> validate_xsd_path()
   end
 
   defp validate_xsd_path(xsd_path) when is_binary(xsd_path) do
