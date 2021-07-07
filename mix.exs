@@ -52,7 +52,7 @@ defmodule EctoXSD.MixProject do
       {:temporary_env, "~> 2.0", optional: true, only: :test},
       {:credo, "~> 1.5.0", optional: true, only: :test, runtime: false},
       {:excoveralls, "~> 0.10", optional: true, only: :test},
-      {:git_hooks, "~> 0.5.0", optional: true, only: :test, runtime: false}
+      {:git_hooks, "~> 0.6.3", optional: true, only: :test, runtime: false}
     ]
   end
 end
